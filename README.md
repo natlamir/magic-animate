@@ -1,3 +1,43 @@
+# Windows Install
+Create Environment
+```
+conda create --name magic-animate python=3.10
+conda activate magic-animate
+```
+
+Clone Repositry
+```
+git clone https://github.com/natlamir/magic-animate.git
+cd magic-animate
+```
+
+Install Dependencies
+```
+pip install -r requirements.txt
+```
+
+Download Pretrained Models
+```
+mkdir pretrained_models
+cd pretrained_models
+git lfs install
+git clone https://huggingface.co/runwayml/stable-diffusion-v1-5
+git clone https://huggingface.co/stabilityai/sd-vae-ft-mse
+git clone https://huggingface.co/zcxu-eric/MagicAnimate
+cd..
+```
+
+Gradio Demo
+```
+python -m demo.gradio_animate
+```
+
+Inference Command
+```
+python -m magicanimate.pipelines.animation --config configs/prompts/animation.yaml
+```
+
+
 <!-- # magic-edit.github.io -->
 
 <p align="center">
