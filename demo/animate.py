@@ -64,7 +64,7 @@ class MagicAnimate():
         self.appearance_encoder = AppearanceEncoderModel.from_pretrained(config.pretrained_appearance_encoder_path, subfolder="appearance_encoder").cuda()
         self.reference_control_writer = ReferenceAttentionControl(self.appearance_encoder, do_classifier_free_guidance=True, mode='write', fusion_blocks=config.fusion_blocks)
         self.reference_control_reader = ReferenceAttentionControl(unet, do_classifier_free_guidance=True, mode='read', fusion_blocks=config.fusion_blocks)
-        if config.pretrained_vae_path is not None:
+        if config.pretrained_vae_path:
             vae = AutoencoderKL.from_pretrained(config.pretrained_vae_path)
         else:
             vae = AutoencoderKL.from_pretrained(config.pretrained_model_path, subfolder="vae")
