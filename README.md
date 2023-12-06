@@ -37,6 +37,7 @@ Inference Command
 python -m magicanimate.pipelines.animation --config configs/prompts/animation.yaml
 ```
 
+Original ReadMe:
 
 <!-- # magic-edit.github.io -->
 
