@@ -16,6 +16,8 @@ Install Dependencies
 pip install -r requirements.txt
 ```
 
+Note: For the below for downloading pretrained models, you might be able to download only the neccessary files instead of running the git clone command which downloads all the files. You may be able to create a folder for each of the 3 and only download the necessary files manually. See [this Github Issue](https://github.com/magic-research/magic-animate/issues/13) for more detail.
+
 Download Pretrained Models
 ```
 mkdir pretrained_models
